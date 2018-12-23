@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:fitsSystemWindows="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.nowfloats.camera.CameraSourcePreview
+        android:id="@+id/preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.nowfloats.camera.GraphicOverlay
+            android:id="@+id/faceOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.nowfloats.camera.CameraSourcePreview>
+
+    <com.nowfloats.camera.OverlayView
+        android:id="@+id/overlay_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/tvTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="3"
+        android:visibility="gone"
+        android:textColor="#FAF7F7"
+        android:textSize="96sp" />
+
+    <ImageView
+        android:id="@+id/ivAutoFocus"
+        android:contentDescription="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/btn_autofocus"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/ibCapture"
+        android:contentDescription="@null"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/shutter"
+        android:layout_gravity="bottom|center"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/ibSwitch"
+        android:contentDescription="@null"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="15dp"
+        android:src="@drawable/camera_switch"
+        android:layout_gravity="top|end"
+        android:visibility="visible"/>
+
+</FrameLayout>
